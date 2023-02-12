@@ -20,6 +20,9 @@ const App = () => {
         bg-[#6469ff] text-white px-4 py-2 
         rounded-md">Create</Link>
       </header>
+
+      {/* min-h-[calc(100vh-73px)] => minimum height of the main content. calculate full height (100vh) minus
+       73 pixels (full height of nav bar)*/}
       <main className="sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]">
         <Routes>
           <Route path="/" element={ <Home /> } />
