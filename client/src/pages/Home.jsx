@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Loader, Card, FormField } from '../components';
 
 const RenderCards = ( {data, title} ) => {
-  if(date?.length > 0) { 
+  if(data?.length > 0) { 
     return data.map((post) => <Card key={post.id} {...post} />)
   }
 
