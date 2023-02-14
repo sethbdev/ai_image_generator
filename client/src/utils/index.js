@@ -7,6 +7,7 @@ export function getRandomPrompt(prompt) {
     surpriseMePrompts.length);
     const randomPrompt = surpriseMePrompts[randomIndex];
 
+    //prevent repeated prompts
     if (randomPrompt === prompt) {
         return getRandomPrompt(prompt);
     }
