@@ -27,6 +27,10 @@ const CreatePost = () => {
 
   };
 
+  const generateImage = () => {
+
+  };
+
   return (
     <section className='max-w-7xl mx-auto'>
       <div>
@@ -78,7 +82,15 @@ const CreatePost = () => {
           )}
           </div>
         </div>
-
+        <div className='mt-5 flex gap-5'>
+            <button
+              type='button'
+              onClick={generateImage}
+              className='text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5'
+              >
+                {generatingImg ? 'Generating ...' : 'Generate'}
+              </button>
+        </div>
       </form>
 
     </section>
