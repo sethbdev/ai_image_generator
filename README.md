@@ -1,7 +1,7 @@
 
 # AI Image Generator
 
-This is a MERN stack project that implements AI to generate images from text prompts. It is intended to allow individuals to explore their creativity.
+This is a MERN stack project that implements AI to generate images from text prompts. It is intended to allow individuals to explore and share their creativity.
 
 
 ## Authors
