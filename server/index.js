@@ -1,7 +1,7 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
-import connectDB from './mongoDB/connect';
+import connectDB from './mongoDB/connect.js';
 
 //pulls environment variables from dotenv file
 dotenv.config();
