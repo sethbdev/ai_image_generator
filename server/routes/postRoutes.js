@@ -36,7 +36,6 @@ router.route('/').post(async (req, res) => {
         const { name, prompt, photo } = req.body;
     const photoUrl = await cloudinary.uploader.upload(photo);
     
-    //will create new post in database
     const newPost = await Post.create({
         name,
         prompt,
