@@ -16,10 +16,21 @@ cloudinary.config({
 
 //GET ALL POSTS
 router.route('/').get(async (req, res) => {
+    try {
+        const posts = await Post.find({});
 
+        res.status(200).json({ success: true, data: posts });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error });
+        
+    }
 });
 
 //CREATE A POST
+//As app scales, need to provide storage for images
+//Will use cloudinary to store images
+//Before creating a new instance of document, will upload image to cloudinary
+//Will then get the url of the image and store it in the database
 router.route('/').post(async (req, res) => {
     try {
         const { name, prompt, photo } = req.body;
