@@ -17,6 +17,8 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [allPosts, setAllPosts] = useState(null);
   const [searchText, setSearchText] = useState("");
+  const [searchedResults, setSearchedResults] = useState(null);
+  const [searchTimeout, setSearchTimeout] = useState(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -44,6 +46,20 @@ const Home = () => {
 
     fetchPosts();
   }, [])
+
+  const handleSearchChange = (e) => {
+    clearTimeout(searchTimeout);
+
+    setSearchText(e.target.value);
+
+    setSearchTimeout(
+      setTimeout(() => {
+        const searchResults = allPosts.filter((item) => item.name.toLowerCase().includes(searchText.toLowerCase()) || item.prompt.toLowerCase().includes(searchText.toLowerCase()));
+
+        setSearchedResults(searchResults);
+      }, 500)
+    );
+  };
 
   return (
     <section className='max-w-7x1 mx-auto'>
