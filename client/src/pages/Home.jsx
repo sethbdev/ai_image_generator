@@ -93,7 +93,7 @@ const Home = () => {
             <div className='grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3'>
               { searchText ? (
                 <RenderCards 
-                  data={[]}
+                  data={ searchedResults }
                   title="No Posts found"
                 />
               ) : (
