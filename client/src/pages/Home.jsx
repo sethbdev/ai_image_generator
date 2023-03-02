@@ -43,7 +43,7 @@ const Home = () => {
     }
 
     fetchPosts();
-  }, [];)
+  }, [])
 
   return (
     <section className='max-w-7x1 mx-auto'>
@@ -75,7 +75,7 @@ const Home = () => {
                 />
               ) : (
                 <RenderCards
-                  data={[]}
+                  data={ allPosts }
                   title="No Posts found"
                 />
                 )
